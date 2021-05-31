@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serpientes y escaleras</title>
+  <link href="../statics/styles/harry.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="icon" href="../statics/img/snitch.png">
+
+
+</head>
+<body>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Instrucciones
+  </button><br><br><br><br><br>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Instrcciones de juego</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button id="play">Tirar dado</button>
+  <div class="container">
+    <!--inserte tablero jeje-->
+  </div>
+  <div class= "music">
+    V O L U M E N <input type="range" id="volumen" min="0" max="1" step="0.1">
+  </div>
+  <p id="text_jugador">Jugador</p>
+  <div id="jugador">
+    <p id="player">1</p>
+  </div>
+  <p id="text_dado">Dado</p>
+  <div id="dado">
+    <p id="num">-</p>
+  </div>
+  <div id="tablero">
+    <img src="../statics/img/harry_tablero.jpg" alt="Tablero Harry Potter - Serpientes y escaleras" id="tab">
+  </div>
+  <div id="casillas" class="container">
+    <div class="col">
+      <div class="row-1">
+        <div class="cas"id="46"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="45"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="28"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="27"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="10"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="9"><img src="../statics/img/transparente.png" alt="vacio"></div>
+      </div>
+      <div class="row-1">
+        <div class="cas"id="47"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="44"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="29"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="26"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="11"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="8"><img src="../statics/img/transparente.png" alt="vacio"></div>
+      </div>
+      <div class="row-1">
+        <div class="cas"id="48"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="43"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="30"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="25"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="12"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="7"><img src="../statics/img/transparente.png" alt="vacio"></div>
+      </div>
+      <div class="row-1">
+        <div class="cas"id="49"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="42"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="31"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="24"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="13"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="6"><img src="../statics/img/transparente.png" alt="vacio"></div>
+      </div>
+      <div class="row-1">
+        <div class="cas"id="50"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="41"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="32"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="23"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="14"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="5"><img src="../statics/img/transparente.png" alt="vacio"></div>
+      </div>
+      <div class="row-1">
+        <div class="cas"id="51"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="40"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="33"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="22"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="15"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="4"><img src="../statics/img/transparente.png" alt="vacio"></div>
+      </div>
+      <div class="row-1">
+        <div class="cas"id="52"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="39"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="34"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="21"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="16"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="3"><img src="../statics/img/transparente.png" alt="vacio"></div>
+      </div>
+      <div class="row-1">
+        <div class="cas"id="53"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="38"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="35"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="20"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="17"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="2"><img src="../statics/img/transparente.png" alt="vacio"></div>
+      </div>
+      <div class="row-1">
+        <div class="cas"id="54"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="37"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="36"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="19"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="18"><img src="../statics/img/transparente.png" alt="vacio"></div>
+        <div class="cas"id="1"><img src="../statics/img/transparente.png" alt="vacio"></div>
+      </div>
+    </div>
+  </div>
+  <script src="../dynamics/js/harry.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+/*===GENERAL===*/
+body{
+  width: 100%;
+  height: 100%;
+}
+nav{
+  height: 75px;
+}
+#nav{
+  background: #FFCB1E;
+}
+
+/*=== TIPOGRAFÍAS ===*/
+@font-face {
+    font-family:"pixel";
+    src: url("../fonts/PressStart.ttf") ; }
+
+@font-face {
+    font-family:"neue";
+    src: url("../fonts/Neue.ttf") ; }
+
+@font-face {
+    font-family:"cultive";
+    src: url("./statics/fonts/Cultive.ttf") ; }
+
+@font-face {
+    font-family:"bungee";
+    src: url("../fonts/Bungee.ttf") ; }   
+
+@font-face {
+    font-family:"normal_animatic";
+    src: url("../fonts/Animatic/AnimaticRegular.ttf") ; } 
+
+@font-face {
+    font-family:"bold_animatic";
+    src: url("../fonts/Animatic/AnimaticBold.ttf") ; }     
+
+/*===LETRAS===*/
+#classic{
+  position: absolute;
+  top: 4%;
+  font-family: "pixel", Arial, Helvetica, sans-serif;
+  font-size: 64px;
+  text-align: center;
+  animation: mover 10s ease-in-out infinite reverse;
+  color: black;
+}
+@keyframes mover{
+  0%{
+     color: black;
+    transform: translate(800px)
+
+  }
+  25%{
+    color: rgb(133, 19, 240);
+    transform: translate(600px)
+
+  }
+  50%{
+    color:rgb(202, 155, 2);
+    transform: translate(400px)
+
+  }
+  75%{
+    color: rgb(0, 4, 255);
+    transform: translate(200px)
+  }
+  100%{
+    color: black;
+    transform: translate(100px)
+  }
+
+}
+/*===MODAL==*/
+.modalText{
+  position: relative;
+  width: 200px;
+  left: 130px;
+  top: -70px
+  
+}
+.modal-fade{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top:0;
+  left:0;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#botonPaleta{
+  color: black;
+}
+/*===ELEMENTOS===*/
+#container{
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #A72FED;
+    height: 700px;
+
+}
+
+#escaleras-fondo{
+  position: absolute;
+  width: 646px;
+  height: 389px;
+  left: 2%;
+  top: 50%;
+
+    /* background-image: url(./img/HArry.jpg); */
+}
+.card-img-top:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+.card-img-top{ 
+  width: 500px;
+  height: 300px;
+  text-align: center;
+}
+.serpientes{
+  width: 500px;
+  height: 300px;
+  border: solid 1px black;
+}
+.memorama{
+  width: 500px;
+  height: 300px;
+  border: solid 1px black;
+}
+#Memorama{
+  position: relative;
+  left: 15%;
+  background-image: url("./statics/img/Memorama.png");
+}
+
+#harry{
+  position: relative;
+  left: 10%;
+  background-image: url("./statics/img/Harry.jpg");
+}
+#classic{
+  position: relative;
+  left: -30%;
+}
+#div_juegos{
+  position: relative;
+  top: 50px;
+  left: 200px;
+}
+
+#listaDeJuegos{
+  position: relative;
+   font-family: "neue", Arial, Helvetica, sans-serif;
+   font-size: 36px;
+  left: 45%;
+  top: 7%;
+}
+#boton-jugar1{
+  position: absolute;
+  width: 263px;
+  height: 70px;
+  left: 10%;
+  top: 80%;
+
+  background-color: #3E3AFF;
+}
+
+#memorama-fondo{
+  position: absolute;
+  width: 646px;
+  height: 389px;
+  left: 55%;
+  top: 50%;
+
+  background: #7204A0;
+}
+
+boton-jugar2{
+
+}
+
+.paleta{
+  border: 0;
+  border-radius: 25%;
+  width: 100px;
+  height: 100px;
+}
+.paleta:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.btn{
+  z-index:2;
+  transition-delay: 0.5s;
+  position: absolute;
+  left: 88%;
+  bottom: 89%;
+   width: 140px;
+   height: 60px;
+}
+
+#botonPaleta{
+  color:rgb(255, 255, 255);
+  border: 1px solid #000;
+  background-color: rgb(111, 109, 240);
+  box-shadow: 5px 5px  #B76CC5;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+#botonPaleta:hover{
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #7204A0;
+  transform: scale(1.2);
+  cursor:pointer;
+}
+
+#foo{
+  position: absolute;
+  top: 117%;
+  width: 99%;
+  height: 25px;
+  background-color: #FFD601;
+}
+
+/*CREDITOS*/
+#nos{
+  position: absolute;
+  top: 4%;
+  font-family: "pixel", Arial, Helvetica, sans-serif;
+  font-size: 64px;
+  text-align: center;
+}
+
+/*====BREAKOUT===*/
