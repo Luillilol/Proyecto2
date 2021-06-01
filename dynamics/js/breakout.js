@@ -4,16 +4,23 @@ window.addEventListener("load", ()=>{
   let width=canvas.width, height=canvas.height;
   const can = new Audio('../statics/audios/can.mp3');
   can.play();
+  const volumen = document.getElementById("volume");
   const perdio = new Audio('../statics/audios/pierde.mp3');
   const cora = new Image("./statics/img/cora.png");
   const win = new Audio("../statics/audios/win.mp3");
   const no = new Audio('../statics/audios/fin.mp3');
   const bri = new Audio ('../statics/audios/brick.m4a')
-  // const volver = getElementById('volver')
+  const volver = document.getElementById('volver')
+  document.cookie="punta=puntaje";
 
-  // volver.addEventListener("click", ()=>{
-  //   window.location.assign("../index.html");
-  // });
+  volver.addEventListener("click", ()=>{
+    window.location.assign("../../index.html");
+  });
+
+
+  volumen.addEventListener("change", ()=> {
+    can.volume = volumen.value;
+  })
 
   var vidas=5;
   var puntaje =0;

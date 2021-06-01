@@ -10,6 +10,12 @@ body{
   background-image: url(../img/hogwarts.jpg);
   background-size: cover;
 }
+h1{
+  font-family: "harry", serif;
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+}
 .btn{
   width: 10%;
   margin-left: 90%;

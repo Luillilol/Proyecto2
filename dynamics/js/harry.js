@@ -1,13 +1,14 @@
 window.addEventListener("load", ()=>{
   const can = new Audio('../statics/audios/harryTheme.mp3');
   can.play();
-
-  const vuelve = getElementById('volver')
-
-  vuelve.addEventListener("click", ()=>{
-    window.location.assign("../index.html");
-  });
   /* 400 x 500 */
+ const volumen = document.getElementById("volumen");
+
+
+volumen.addEventListener("change", ()=> {
+    can.volume = volumen.value;
+  })
+
   let jugador = 0;
   function tirarDado(){
 	  return Math.round(Math.random()*5)+1;
@@ -47,12 +48,16 @@ window.addEventListener("load", ()=>{
             casilla1-=menos;
           }
           let cas = document.getElementById(casilla1);
-          cas.innerHTML = "<img src='../statics/img/mora.png' alt='ficha' width = '50px'>";
+          cas.innerHTML = "<img src='../statics/img/play1.png' alt='ficha' width = '50px'>";
         }else if(casilla1>=54)
         {
           let cas = document.getElementById("54");
-          cas.innerHTML = "<img src='../statics/img/mora.png' alt='ficha' width = '50px'>";
+          cas.innerHTML = "<img src='../statics/img/play1.png' alt='ficha' width = '50px'>";
           console.log("Gana jugador 1")
+          let gana = document.getElementById("gana");
+          let puntaje = 100;
+          document.cookie = "harry1=1";
+          gana.innerText = "Gana jugador 1"
         }
       }
       jugador=1;
@@ -81,16 +86,26 @@ window.addEventListener("load", ()=>{
             casilla2-=menos;
           }
           let cas = document.getElementById(casilla2);
-          cas.innerHTML = "<img src='../statics/img/azu.png' alt='ficha' width = '50px'>";
+          cas.innerHTML = "<img src='../statics/img/play2.png' alt='ficha' width = '50px'>";
         }else if(casilla2>=54)
         {
           let cas = document.getElementById("54");
-          cas.innerHTML = "<img src='../statics/img/azu.png' alt='ficha' width = '50px'>";
+          cas.innerHTML = "<img src='../statics/img/play2.png' alt='ficha' width = '50px'>";
           console.log("Gana jugador 2")
+          let gana = document.getElementById("gana");
+          document.cookie = "harry1=1";
+          gana.innerText = "Gana jugador 2"
         }
       }
       jugador=0;
     }
   })
+  let vuelve = document.getElementById('volver');
+
+  vuelve.addEventListener("click", ()=>{
+    window.location.assign("../../index.html");
+  })
 })
+
+
   
