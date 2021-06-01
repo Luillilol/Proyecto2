@@ -21,15 +21,15 @@
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" tabindex="0" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item" >
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Puntuación</a>
+            <li class="nav-item" >
+              <a class="nav-link active" aria-current="page" href="./templates/puntos.html">Puntuación</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" >
               <a class="nav-link active" aria-current="page" href="./templates/creditos.html">Créditos</a>
             </li>
           </ul>
@@ -44,12 +44,12 @@
 
     <!--MODAL-->
     <!-- Button trigger modal -->
-    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" id="botonPaleta">
+    <button type="button" class="btn" tabindex="0" data-bs-toggle="modal" data-bs-target="#exampleModal" id="botonPaleta">
       PALETAS DE COLORES
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal"  aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -57,9 +57,9 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div id="morado"><img src="./statics/img/mora.png" alt="morado" class="paleta"><h2 class="modalText">Morado</h2></div>
-            <div id="amarillo"><img src="./statics/img/ama.png" alt="amarillo" class="paleta"><h2 class="modalText">Amarillo</h2></div>
-            <div id="azul"><img src="./statics/img/azu.png" alt="azul" class="paleta"><h2 class="modalText">Azul</h2></div>
+            <div id="morado" tabindex="0" ><img src="./statics/img/mora.png" alt="morado" class="paleta"><h2 class="modalText">Morado</h2></div>
+            <div id="amarillo" tabindex="0" ><img src="./statics/img/ama.png" alt="amarillo" class="paleta"><h2 class="modalText">Amarillo</h2></div>
+            <div id="azul" tabindex="0" ><img src="./statics/img/azu.png" alt="azul" class="paleta"><h2 class="modalText">Azul</h2></div>
           </div>
           <div class="modal-footer">
           </div>
@@ -73,8 +73,8 @@
     <h3 id="listaDeJuegos">Lista de Juegos:</h3>
     <div class="row" id="div_juegos">
       <!--Serpientes-->      
-      <div class="col-sm-6 gx-5" tabindex="0">
-        <div class="card" style="width: 18rem" id="serpientesCard" tabindex="0">
+      <div class="col-sm-6 gx-5">
+        <div class="card" style="width: 18rem" id="serpientesCard">
           <img src="./statics/img/Harry.jpg" class="card-img-top" alt="Imagen serpientes y escaleras">
           <img src="./statics/img/des_mo.jpg" alt="descripcion">
         </div>
@@ -89,8 +89,8 @@
       <!--MEMORAMA-->
       <div class="col-sm-6 gx-5">
         <div class="card" style="width: 18rem;" id="breackoutCard">
-          <img src="./statics/img/seka.jpg" class="card-img-top" alt="snk">
-          <p class="card-text">Juega el clásico juego Breackout, con ayuda de la paleta y la pelota tu objetivo es romper todos los ladrillos.</p>
+          <img src="./statics/img/break_mora.jpg" class="card-img-top" alt="snk">
+          <img src="./statics/img/morado_break.jpg" alt="descripcion">
         </div>
       </div>
    </div>
@@ -104,9 +104,9 @@
   <!--Pacman-->
   <div class="acomodo">
     <div class="pista">
-     <div class="luces"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-     <div class="tras-come"></div>
-     <div class="packman"><div class="comer"></div></div>
+     <div class="moneda"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+     <div class="detras"></div>
+     <div class="cuerpo"><div class="comer"></div></div>
     </div>  
     </div>
     </div>

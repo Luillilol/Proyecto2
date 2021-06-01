@@ -25,6 +25,32 @@ body{
   font-size: 2.5vw;
   text-align: center;
 }
+.music:hover{
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: rgb(60, 84, 190);
+  transform: scale(1.1);
+  cursor:pointer;
+}
+#volver{
+  position: absolute;
+  left: 1%;
+  top: 1%;
+  transition-delay: 0.5s;
+  background-color: rgb(167, 191, 212);
+  width: 15%;
+  border-radius: 35px;
+  font-family: "bold_amatic", Arial, Helvetica, sans-serif;
+  font-size: 2.5vw;
+  text-align: center;
+}
+#volver:hover{
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: rgb(60, 84, 190);
+  transform: scale(1.1);
+  cursor:pointer;
+}
 .col{
   width: 100%;
   display: flex;
@@ -103,4 +129,25 @@ body{
   margin: unset;
   padding: unset;
   background-color: transparent;
+}
+
+/*MODAL*/
+#controles{
+  width: 300px;
+  height: 300px;
+}
+@media screen and (max-width: 1250px){
+  body{
+  width: 90%;
+  height: 900px;
+  background-color: rgb(135, 214, 238);
+  background-image: url(../img/pantalla_real.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  }
+  #tablero{
+    display: none;
+  }
+  
 }

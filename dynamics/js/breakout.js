@@ -6,14 +6,21 @@ window.addEventListener("load", ()=>{
   can.play();
   const perdio = new Audio('../statics/audios/pierde.mp3');
   const cora = new Image("./statics/img/cora.png");
+  const win = new Audio("../statics/audios/win.mp3");
+  const no = new Audio('../statics/audios/fin.mp3');
+  const bri = new Audio ('../statics/audios/brick.m4a')
+  // const volver = getElementById('volver')
+
+  // volver.addEventListener("click", ()=>{
+  //   window.location.assign("../index.html");
+  // });
+
   var vidas=5;
   var puntaje =0;
-  var perdiste ="G A M E   O V E R "
+  var contBloques = 15;
+  var perdiste ="G A M E   O V E R ";
+  var ganaste = "Y O U   W I N";
   /* 400 x 500 */
-
-  // for(a=0;a<=vidas; a++){
-  //   printImage(cora)
-  // }
 
   class bloque{
     constructor(x, y, estado, color){
@@ -23,12 +30,8 @@ window.addEventListener("load", ()=>{
       this.color = color
     }
   }
-  /*
-  for(let i=10; i<10; i++){
-    for(let g=3; g<3; g++){
-      const b1 = new bloque(20, 10, 0, 0);
-    }
-  }*/
+  
+
   const b1 = new bloque(30, 10, 0, 0);
   const b2 = new bloque(150, 10, 0, 0);
   const b3 = new bloque(270, 10, 0, 0);
@@ -77,7 +80,7 @@ window.addEventListener("load", ()=>{
     x:200,
     y:455, 
     r:10,
-    speed:4,
+    speed:6,
     horizontal: 1, /*horizonal 1 = derecha y 2 = izquierda */
     vertical : 1   /*vertical 1 = arriba y 2=abajo*/
   }
@@ -91,10 +94,11 @@ window.addEventListener("load", ()=>{
   let start = 1;
   let perdida = 0;
   let vez =0;
+  let perder = 0;
 
 
   function drawBloques(){
-   for (let value of bloques){
+    for (let value of bloques){
       if(value.estado==0)
       {
         if(value.color==0)
@@ -129,23 +133,14 @@ window.addEventListener("load", ()=>{
           ctx.fill();
           ctx.closePath();
         }
-      }else{
-        let pun = document.getElementById('score')
-        ctx.beginPath();
-        ctx.rect(value.x, value.y, 100, 20);
-        ctx.fillStyle = "#FFFFFF";
-        ctx.fill();
-        ctx.closePath();
-        puntaje += 10;
-        pun.innerHTML=puntaje;
       }
-   }
+    }
   }
 
 
   function drawPaleta(){
     ctx.beginPath();
-      ctx.rect(paleta.x, paleta.y, 100, 10);
+      ctx.rect(paleta.x, paleta.y+10, 100, 10);
       ctx.fillStyle = "#FFFFFF";
       ctx.fill();
     ctx.closePath();
@@ -193,7 +188,9 @@ window.addEventListener("load", ()=>{
               let sin = document.getElementById('corazon');
               sin.style.display="none";
               menos.innerHTML=perdiste;
-
+              perder = 1;
+              can.pause();
+              no.play();
             }
 
         }    
@@ -205,35 +202,23 @@ window.addEventListener("load", ()=>{
   //funcionaria una variable para detectar que haya colisionado con todos sin perder para asignar puntos? o mejor uno que contenga los puntos y cada vez que ponga enter otra vez, le descuente
   function colision(){
     for (let value of bloques){
-      //falta hacer una validacion donde solo se ilumine de blanco el bloque q ya se toco y no todos
       if(value.estado==0 && ((value.x < pelota.x+10) && (value.x+100 > pelota.x-10)) && ((value.y < pelota.y+10)&&(value.y+20>pelota.y-10))&&((value.x+20 < pelota.x+10)&&(value.x) ) )
       { 
-        console.log("choque");
-        pelota.vertical=2;
-        value.estado=1
-        
-        /*value.estado=1;
-        console.log(value.estado);
-        perdida+=1;
-      }else if(perdida==15){
-        if(vez==0)
-        {
-          console.log(perdida)
-          pierde.play();
-          vez = 1;
+        if(pelota.vertical ===2){
+          pelota.vertical=1;
+          contBloques--;
+        }else{
+          pelota.vertical=2;
+          contBloques--;
         }
-      }else{
-        console.log("Hay algo mal con el if");
-      }*/
+        console.log("choque");
+        let pun = document.getElementById('score');
+        puntaje += 100;
+        pun.innerHTML=puntaje;
+        value.estado=1;
+        bri.play();
+
       }
-      //============IDEA==========//
-      /* 
-      Recorrer el arreglo y si la y && x de la pelota coincide con la y && x del objeto y su estado es 0 cambiar su estado a 1
-
-      Con el estado en 1 podemos hacer que se elimine del arreglo
-
-      No olvidar hacer el rebote con los bloques al eliminarlos
-      */
     }
   }
   
@@ -243,21 +228,33 @@ window.addEventListener("load", ()=>{
    
     ctx.clearRect(0, 0, 400, 500);
     /* DIBUJAR PALETA*/
-    drawPaleta();
-    /*DIBUJAR BOLA*/
-    drawBola();
-    console.log(start);
-    if(start == 0){
-       bolaMov();
-       colision();
+    if(contBloques>0 && perder===0){
+      drawPaleta();
+      /*DIBUJAR BOLA*/
+      drawBola();
+      console.log(start);
+      if(start == 0){
+        bolaMov();
+        colision();
+      }else{
+        pelota.x = paleta.x+50;      
+      }
+      drawBloques();
+      requestAnimationFrame(draw);
     }else{
-      pelota.x = paleta.x+50;      
-    }
-    drawBloques();
-    requestAnimationFrame(draw);
+      if(contBloques===0){
+        let menos = document.getElementById('letra_cora');
+        let sin = document.getElementById('corazon');
+        sin.style.display="none";
+        menos.innerHTML=ganaste;
+        can.pause();
+        win.play();
+             
+      }else if(vidas ===0){
+        console.log("VIDAS");
+      }
+    }      
   }
-
-
   document.querySelector("body").addEventListener("keydown", (e)=>{
     console.log(e.key);
     /*DETECTAR EVENTOS PARA MOVER BARRAS 12LINEAS*/

@@ -312,127 +312,116 @@ boton-jugar2{
     left: 76%;
 }
 /*==========PACMAN=========*/
-* {margin:0; padding:0;}
 
-.pista {
-      background: #000;
-      border: 5px solid rgb(190, 51, 255);
-      border-radius: 10px;
-      height: 160px;
-      margin: 25px 0;
-      padding: 30px 0 0;
-      box-shadow: 0 0 12px 6px rgba(255, 0, 170, 0.5);
-      position: relative;
-}
-.pista:before, .pista:after {
-    background: none repeat scroll 0 0 black;
-    content: "";
-    display: block;
-    height: 145px;
-    position: absolute;
-    top: 20px;
-    width: 20px;
-}
-.pista:before {left: -10px;}
-.pista:after {right: -5px;}
-.luces span {
-      display: inline-block;
-      width: 25px;
-      height: 25px;
-      border-radius: 100%;
-      background: #fff;
-      box-shadow: 0 0 10px 5px rgba(255,255,255, .8);
-      margin: 45px 4%;      
-}
-.packman {
-     animation: comer 10s infinite linear;
-     top: 0;
-     left: 0;
-     position: absolute;
-     height: 100%;
-     width: 100%;
-}
+.cuerpo {
+  animation: comer 10s infinite linear;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+} 
 .comer {
-     position: absolute;
-     top: 30px;
-     left: -60px;
-     width:1px;
-     height:1px;
-     border-right:60px solid transparent;
-     border-top:60px solid #FFD601;
-     border-left:60px solid #FFD601;
-     border-bottom:60px solid #FFD601;
-     border-radius: 60px;
-     z-index: 3;
+  position: absolute;
+  top: 30px;
+  left: -55px;
+  width:1px;
+  height:1px;
+  border-right:55px solid transparent;
+  border-top:55px solid #FFD601;
+  border-left:55px solid #FFD601;
+  border-bottom:55px solid #FFD601;
+  border-radius: 55px;
+  z-index: 3;
 
 }
 .comer:after {
-    background: black;
-    border-radius: 50%;
-    content: "";
-    height: 20px;
-    left: -10px;
-    position: absolute;
-    top: -40px;
-    width: 20px;
-    z-index: 5;
+  background: rgb(43, 3, 70);
+  border-radius: 50%;
+  content: "";
+  height: 20px;
+  left: -10px;
+  position: absolute;
+  top: -40px;
+  width: 20px;
+  z-index: 5;
 }
 .comer:before {
-    border-color: #FFD601 transparent #FFD601 #FFD601;
-    border-radius: 60px 60px 60px 60px;
-    border-right: 60px solid transparent;
-    border-style: solid;
-    border-width: 60px;
-    content: "";
-    height: 1px;
-    left: -60px;
-    position: absolute;
-    top: -60px;
-    width: 1px;
-    z-index: -1;
-    animation: boca .95s infinite linear; 
- }
-
-.tras-come {
-    background: black;
-    position: absolute;
-    width: 100%;
-    height: 70px;
-    left: 0px;
-    top: 60px;
-    opacity: 1;
-     animation: tras-come 10s infinite linear;
-    
+  border-color: #FFD601 transparent #FFD601 #FFD601;
+  border-radius: 55px 55px 55px 55px;
+  border-right: 55px solid transparent;
+  border-style: solid;
+  border-width: 55px;
+  content: "";
+  height: 1px;
+  left: -55px;
+  position: absolute;
+  top: -55px;
+  width: 1px;
+  z-index: -1;
+  animation: boca .95s infinite linear; 
+}
+.pista {
+  background: rgb(43, 3, 70);
+  border-radius: 10px;
+  height: 160px;
+  margin: 25px 0;
+  padding: 30px 0 ;
+  position: relative;
+}
+.pista:before, .pista:after {
+  background: none repeat scroll 0 0 rgb(43, 3, 70);
+  content: "";
+  display: block;
+  height: 144px;
+  position: absolute;
+  top: 20px;
+  width: 20px;
+}
+.pista:before {left: -10px;}
+.pista:after {right: -5px;}
+.moneda span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background: #fff;
+  margin: 45px 4%;      
+}
+.detras {
+  background: rgb(43, 3, 70);
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  left: 0px;
+  top: 60px;
+  opacity: 1;
+  animation: detras 9.8s infinite linear;  
 }  
 
-
-
- /*=============keyframes================*/
 @keyframes comer { 
-    0% { left: -20%;}
-    50% { left: 50%;}
-    100% { left: 100%;}
-       }
+  0% { left: -20%;}
+  50% { left: 50%;}
+  100% { left: 100%;}
+}
 
-@keyframes tras-come { 
-    0% { left: -10%; width:0%;}
-    100% { left: 0%; width:100%}
-       }
+@keyframes detras { 
+  0% { left: -12%; width:0%;}
+  100% { left: 0%; width:100%}
+}
 @keyframes boca { 
-    0%  { transform: rotate(0deg); }
-    10% { transform: rotate(-18deg); }
-    20% { transform: rotate(-36deg); }
-    30% { transform: rotate(-54deg); }
-    40% { transform: rotate(-72deg); }
-    50% { transform: rotate(-90deg); } 
-    60% { transform: rotate(-72deg); }
-    70% { transform: rotate(-54deg); }
-    80% { transform: rotate(-36deg); }
-    90% { transform: rotate(-18deg); }
-    100% { transform: rotate(0deg); }
-       }
+  0%  { transform: rotate(0deg); }
+  20% { transform: rotate(-35deg); }
+  30% { transform: rotate(-52deg); }
+  40% { transform: rotate(-70deg); }
+  50% { transform: rotate(-90deg); } 
+  60% { transform: rotate(-70deg); }
+  70% { transform: rotate(-52deg); }
+  80% { transform: rotate(-35deg); }
+  100% { transform: rotate(0deg); }
+}
 
-/*=========== Posición ========*/
+/*=========== Posición Pakman ========*/
 .acomodo{
     position: relative;
     top: 33%;

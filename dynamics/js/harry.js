@@ -1,6 +1,12 @@
 window.addEventListener("load", ()=>{
   const can = new Audio('../statics/audios/harryTheme.mp3');
   can.play();
+
+  const vuelve = getElementById('volver')
+
+  vuelve.addEventListener("click", ()=>{
+    window.location.assign("../index.html");
+  });
   /* 400 x 500 */
   let jugador = 0;
   function tirarDado(){
