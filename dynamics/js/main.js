@@ -103,5 +103,14 @@ window.addEventListener("load", ()=>{
       window.location.assign("../../templates/breakout.html");
     }  
   });
+
+  let botonUsuario = document.getElementById("enviar");
+  botonUsuario.addEventListener("click", ()=>{
+    let name = document.getElementById("nombreUsario");
+    document.cookie = "nombre="+name.value;
+    console.log(name.value);
+  });
+
+
   
 });

@@ -1,4 +1,20 @@
 window.addEventListener("load", ()=>{
+
+
+  /*let cookies = document.cookie;
+  let arrCookies = cookies.split('; ');
+  console.log(arrCookies);
+  let arreglo = [];
+  for(const valor of arrCookies)
+  {
+    const cookie = valor.split('=');
+    arreglo.push(cookie);
+    console.log(cookie);
+    //Todo bien hasta aqui jeje
+  }
+*/
+
+
   var canvas = document.getElementById("tablero");
   var ctx = canvas.getContext("2d");
   let width=canvas.width, height=canvas.height;
@@ -11,7 +27,7 @@ window.addEventListener("load", ()=>{
   const no = new Audio('../statics/audios/fin.mp3');
   const bri = new Audio ('../statics/audios/brick.m4a')
   const volver = document.getElementById('volver')
-  
+  var x = document.cookie;
 
   volver.addEventListener("click", ()=>{
     window.location.assign("../index.html");
@@ -36,7 +52,6 @@ window.addEventListener("load", ()=>{
       this.color = color
     }
   }
- document.cookie = 'color_favorito='+puntaje;
 
 
   const b1 = new bloque(30, 10, 0, 0);
@@ -193,12 +208,17 @@ window.addEventListener("load", ()=>{
             if(vidas==0){
               let menos = document.getElementById('letra_cora');
               let sin = document.getElementById('corazon');
+              let suma = getElementById('uno');
+
+              suma.innerHTML=puntaje;
               sin.style.display="none";
               menos.innerHTML=perdiste;
+              let mas = vidas*100;
+                puntaje+=mas;
               perder = 1;
               can.pause();
               no.play();
-              document.cookie = 'puntuacion='+puntaje;
+              document.cookie = nameUser+'='+puntaje;
 
             }
 
@@ -216,9 +236,11 @@ window.addEventListener("load", ()=>{
         if(pelota.vertical ===2){
           pelota.vertical=1;
           contBloques--;
+          console.log(contBloques+" bloques");
         }else{
           pelota.vertical=2;
           contBloques--;
+          console.log(contBloques+" bloques");
         }
         console.log("choque");
         let pun = document.getElementById('score');
@@ -241,8 +263,7 @@ window.addEventListener("load", ()=>{
       drawPaleta();
       /*DIBUJAR BOLA*/
       drawBola();
-      console.log(start);
-      console.log(contBloques+" bloques");
+      //console.log(start);
       if(start == 0){
         bolaMov();
         colision();
@@ -252,12 +273,12 @@ window.addEventListener("load", ()=>{
       drawBloques();
       requestAnimationFrame(draw);
     }else{
-      if(contBloques<15){
+      if(contBloques===0){
         let menos = document.getElementById('letra_cora');
         let sin = document.getElementById('corazon');
         let mas = vidas*100;
         puntaje+=mas;
-        pun.innerHTML=puntaje;
+        //pun.innerHTML=puntaje;
         console.log(mas);
         console.log(puntaje);
         sin.style.display="none";
@@ -265,9 +286,12 @@ window.addEventListener("load", ()=>{
         console.log("GANASTE");
         can.pause();
         win.play();
-        document.cookie = 'puntuacion='+puntaje;
+        //let suma = getElementById('uno');
 
-        //document.cookie = "punta= Cookie"; 
+        //suma.innerHTML=puntaje;
+        document.cookie = nameUser+'='+puntaje;
+
+       
 
       
         // if (vidas==5){

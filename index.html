@@ -27,7 +27,7 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item" >
-              <a class="nav-link active" aria-current="page" href="./templates/puntos.html">Puntuación</a>
+              <a class="nav-link active" aria-current="page" href="./templates/puntos.html">Puntajes</a>
             </li>
             <li class="nav-item" >
               <a class="nav-link active" aria-current="page" href="./templates/creditos.html">Créditos</a>
@@ -53,17 +53,19 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Paleta de colores</h5>
+            <h5 class="modal-title" id="exampleModalLabel">PALETA DE COLORES</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <div id="morado"><img src="./statics/img/mora.png" alt="morado" class="paleta" ><h2 class="modalText"><p id="textMorado" tabindex="0">Morado</p></h2></div>
             <div id="amarillo"  ><img src="./statics/img/ama.png" alt="amarillo" class="paleta"><h2 class="modalText"><p id="textAmarillo" tabindex="0">Amarillo</p></h2></div>
             <div id="azul" ><img src="./statics/img/azu.png" alt="azul" class="paleta"><h2 class="modalText"><p id="textAzul" tabindex="0">Azul</p></h2></div>
-            <div id=""><label for="nombreUsario" id="labelUsuario"><h2>Nombre de Usuario:</h2><input type="text" id="nombreUsario"></label></div>
+            <div id=""><label for="nombreUsario" id="labelUsuario"><h2>Nombre de Usuario:</h2><input type="text" id="nombreUsario" maxlength="10"></label><br>
+            <button id="enviar">Enviar</button></div>
+          </div> <br>
           </div>
           <div class="modal-footer">
-          </div>
+
         </div>
       </div>
     </div>
@@ -122,5 +124,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>     
   <script src="./dynamics/js/main.js"></script>
+  <script src="./dynamics/js/breakout.js"></script>
+
   </body>
 </html>

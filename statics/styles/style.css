@@ -192,11 +192,6 @@ nav{
 
   background: #7204A0;
 }
-
-boton-jugar2{
-
-}
-
 .paleta{
   border: 0;
   border-radius: 25%;
@@ -207,7 +202,6 @@ boton-jugar2{
   opacity: 0.5;
   cursor: pointer;
 }
-
 .btn{
   z-index:2;
   transition-delay: 0.5s;
@@ -226,8 +220,6 @@ boton-jugar2{
    font-family: "bold_amatic", Arial, Helvetica, sans-serif;
   font-size: 2vw;
 }
-
-
 #botonPaleta:hover{
   outline: none;
   color: rgb(255, 255, 255);
@@ -236,6 +228,7 @@ boton-jugar2{
   cursor:pointer;
 }
 
+/*==FOOTER==*/
 #foo{
   position: relative;
   top: 33%;
@@ -314,6 +307,7 @@ boton-jugar2{
     left: 76%;
 }
 
+/*==BOTON_VOLVER==*/
 #volver{
   position: absolute;
   left: 1%;
@@ -410,6 +404,7 @@ boton-jugar2{
     height: 40px;
     animation: monedas 10s infinite linear;
   }
+  
    
   @keyframes monedas { 
     0% { left: -12%; width:0%;}
@@ -502,4 +497,22 @@ boton-jugar2{
     left: 150px;
   }
   
+  #nombreUsario{
+    background-color: paleturquoise;
+  }
+  #enviar{
+  color:rgb(255, 255, 255);
+  background-color: rgb(166, 88, 180);
+  box-shadow: 5px 5px  rgb(82, 79, 238);
+  border-radius: 30px;
+  font-family: "bold_amatic", Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+}
 
+#enviar:hover{
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #7204A0;
+  transform: scale(1.2);
+  cursor:pointer;
+}

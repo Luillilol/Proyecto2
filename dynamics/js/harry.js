@@ -41,11 +41,25 @@ volumen.addEventListener("change", ()=> {
           {
             let mas = tirarDado();
             casilla1+=mas;
+            let mensaje = document.getElementById("msj");
+            mensaje.innerHTML = "Dumbledore te ayudo";
           }
           if(casilla1==14 || casilla1==27 || casilla1==31 || casilla1==40 || casilla1==47)
           {
             let menos = tirarDado();
             casilla1-=menos;
+            let mensaje = document.getElementById("msj");
+            mensaje.innerHTML = "El dementor te bajo";
+            if(casilla1==5 || casilla1==11 || casilla1==23 || casilla1==34 || casilla1==43)
+            {
+              let mas = tirarDado();
+              casilla1+=mas;
+              let mensaje = document.getElementById("msj");
+              mensaje.innerHTML = "Dumbledore te ayudo";
+            }else{
+              let mensaje = document.getElementById("msj");
+              mensaje.innerHTML = " ";
+            }
           }
           let cas = document.getElementById(casilla1);
           cas.innerHTML = "<img src='../statics/img/play1.png' alt='ficha' width = '50px'>";
@@ -55,8 +69,9 @@ volumen.addEventListener("change", ()=> {
           cas.innerHTML = "<img src='../statics/img/play1.png' alt='ficha' width = '50px'>";
           console.log("Gana jugador 1")
           let gana = document.getElementById("gana");
+          /*
           let puntaje = 100;
-          document.cookie = "harry1=1";
+          document.cookie = "harry1=1";*/
           gana.innerText = "Gana jugador 1"
         }
       }
@@ -79,11 +94,25 @@ volumen.addEventListener("change", ()=> {
           {
             let mas = tirarDado();
             casilla2+=mas;
+            let mensaje = document.getElementById("msj");
+            mensaje.innerHTML = "Dumbledore te ayudo";
           }
           if(casilla2==14 || casilla2==27 || casilla2==31 || casilla2==40 || casilla2==47)
           {
             let menos = tirarDado();
             casilla2-=menos;
+            let mensaje = document.getElementById("msj");
+            mensaje.innerHTML = "El dementor te bajo";
+            if(casilla2==5 || casilla2==11 || casilla2==23 || casilla2==34 || casilla2==43)
+            {
+              let mas = tirarDado();
+              casilla2+=mas;
+              let mensaje = document.getElementById("msj");
+              mensaje.innerHTML = "Dumbledore te ayudo";
+            }
+          }else{
+            let mensaje = document.getElementById("msj");
+            mensaje.innerHTML = " ";
           }
           let cas = document.getElementById(casilla2);
           cas.innerHTML = "<img src='../statics/img/play2.png' alt='ficha' width = '50px'>";
@@ -93,7 +122,7 @@ volumen.addEventListener("change", ()=> {
           cas.innerHTML = "<img src='../statics/img/play2.png' alt='ficha' width = '50px'>";
           console.log("Gana jugador 2")
           let gana = document.getElementById("gana");
-          document.cookie = "harry1=1";
+          //document.cookie = "harry1=1";
           gana.innerText = "Gana jugador 2"
         }
       }
@@ -105,7 +134,4 @@ volumen.addEventListener("change", ()=> {
   vuelve.addEventListener("click", ()=>{
     window.location.assign("../index.html");
   })
-})
-
-
-  
+}) 

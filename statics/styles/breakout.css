@@ -1,3 +1,9 @@
+/*===FUENTES===*/
+@font-face {
+    font-family:"bold_amatic";
+    src: url("../fonts/Amatic/AmaticBold.ttf"); 
+} 
+
 /*===GENERAL===*/
 body{
   width: 90%;
@@ -56,11 +62,6 @@ h1{
   width: 400px;
   height: 500px;
 }
-
-@font-face {
-    font-family:"bold_amatic";
-    src: url("../fonts/Amatic/AmaticBold.ttf") ; } 
-
 #vida, #corazon{
   position: absolute;
   height: 50px;
@@ -118,7 +119,6 @@ h1{
   height: 300px;
   left: 50%;
 }
-
 #volver{
   position: absolute;
   left: 1%;
@@ -138,6 +138,7 @@ h1{
   transform: scale(1.1);
   cursor:pointer;
 }
+/*MEDIA*/
 @media screen and (max-width: 1250px){
   body{
   width: 90%;
