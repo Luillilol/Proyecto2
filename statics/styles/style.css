@@ -307,6 +307,13 @@ nav{
     left: 76%;
 }
 
+
+#Fabian,#Luna,#Ela,#Falcon{
+  width: 270px;
+  height: 200px;
+  overflow-wrap:break-word;
+}
+
 /*==BOTON_VOLVER==*/
 #volver{
   position: absolute;
