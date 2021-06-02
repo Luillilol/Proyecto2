@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/83356029/120415873-e0ee9000-c321-11eb-8f26-41c66c4f4f22.png)
+![image](https://user-images.githubusercontent.com/83356029/120416902-8ce4ab00-c323-11eb-81e5-e16dec131c05.png)
 
 # Classic Games
 ### Kiki's Arcade (temporal):
