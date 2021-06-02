@@ -15,10 +15,6 @@
 5. Asegurate de que salga la pantalla de incio, si llegas a ese punto ya podrás
    disfrutar de estos maravillosos juegos
 
-## GUÍA DE CONFIGURACIÓN DEL PROYECTO
-
-
-
 ## CARACTERISTICAS DEL PROYECTO
 
 Classic Games es una página web arcade con los videojuegos Serpientes y escaleras 
