@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/83356029/120415873-e0ee9000-c321-11eb-8f26-41c66c4f4f22.png)
+
 # Classic Games
 ### Kiki's Arcade (temporal):
 * Acosta Durán Luna Fernanda
