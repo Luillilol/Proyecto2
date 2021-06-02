@@ -7,7 +7,13 @@
 
 ## GUÍA DE INSTALACIÓN DEL PROYECTO
 
-
+1. Crea una carpeta en tu disco local dentro de la carpeta de tu servidor y dentro
+   de htdocs donde el nombre sea Classic_Games
+2. Clona este repositorio con git clone <link> o descargalo y descomprimelo
+3. Prende tu servidor Apache
+4. En tu navegador (de preferencia no uses Edge) entra a la carpeta del proyecto
+5. Asegurate de que salga la pantalla de incio, si llegas a ese punto ya podrás
+   disfrutar de estos maravillosos juegos
 
 ## GUÍA DE CONFIGURACIÓN DEL PROYECTO
 
