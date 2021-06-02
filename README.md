@@ -1,0 +1,19 @@
+# Proyecto2
+## Classic Games
+### Equipo ------
+
+## GUÍA DE INSTALACIÓN DEL PROYECTO
+
+
+
+## GUÍA DE CONFIGURACIÓN DEL PROYECTO
+
+
+
+## CARACTERISTICAS DEL PROYECTO
+
+
+
+## COMENTARIOS ADICIONALES
+
+
