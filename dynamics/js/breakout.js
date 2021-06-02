@@ -14,7 +14,7 @@ window.addEventListener("load", ()=>{
   
 
   volver.addEventListener("click", ()=>{
-    window.location.assign("../../index.html");
+    window.location.assign("../index.html");
   });
 
 
