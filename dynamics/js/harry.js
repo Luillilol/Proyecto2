@@ -103,7 +103,7 @@ volumen.addEventListener("change", ()=> {
   let vuelve = document.getElementById('volver');
 
   vuelve.addEventListener("click", ()=>{
-    window.location.assign("../../index.html");
+    window.location.assign("../index.html");
   })
 })
 
