@@ -1,18 +1,44 @@
 window.addEventListener("load", ()=>{
 
 
-  /*let cookies = document.cookie;
-  let arrCookies = cookies.split('; ');
-  console.log(arrCookies);
-  let arreglo = [];
-  for(const valor of arrCookies)
-  {
-    const cookie = valor.split('=');
-    arreglo.push(cookie);
-    console.log(cookie);
-    //Todo bien hasta aqui jeje
+  let cookies = document.cookie;
+  let nameUser;
+
+
+  if(cookies.indexOf(";") === -1){
+    let arreglo = [];
+    arreglo = cookies.split('=');
+    console.log(arreglo);
+    nameUser = arreglo[1];
+    console.log(nameUser+"=-1");
+  }else{
+    let arreglo2 = [];
+    let arrCookies = cookies.split('; ');
+    console.log(cookies+"1");
+    for(const valor of arrCookies){
+      const cookie = valor.split("=");
+      arreglo2.push(cookie);
+      console.log(cookie);
+    }
+    console.log(arreglo2);
+    nameUser = arreglo2[0][0];
+    console.log(nameUser+"nameuser= 1");
   }
-*/
+
+  //  let cookies = document.cookie;
+  // let arrCookies = cookies.split('; ');
+  // console.log(arrCookies);
+  // let arreglo = [];
+  // for(const valor of arrCookies)
+  // {
+  //   const cookie = valor.split('=');
+  //   arreglo.push(cookie);
+  //   console.log(cookie);
+  //   //Todo bien hasta aqui jeje
+  // }
+  
+
+ 
 
 
   var canvas = document.getElementById("tablero");
@@ -208,9 +234,9 @@ window.addEventListener("load", ()=>{
             if(vidas==0){
               let menos = document.getElementById('letra_cora');
               let sin = document.getElementById('corazon');
-              let suma = getElementById('uno');
-
-              suma.innerHTML=puntaje;
+              //let suma = getElementById('uno');
+              console.log('pierdes')
+              //suma.innerHTML=puntaje;
               sin.style.display="none";
               menos.innerHTML=perdiste;
               let mas = vidas*100;
@@ -286,6 +312,10 @@ window.addEventListener("load", ()=>{
         console.log("GANASTE");
         can.pause();
         win.play();
+        let primero = document.getElementById('nombre_uno');
+        //primero.innerHTML= 'maria';
+        
+     
         //let suma = getElementById('uno');
 
         //suma.innerHTML=puntaje;
@@ -325,6 +355,7 @@ window.addEventListener("load", ()=>{
       start =0;
     }  
   })
+
 requestAnimationFrame(draw);  
 })
 
