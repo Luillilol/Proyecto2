@@ -1,5 +1,5 @@
 # Classic Games
-### Equipo ------
+### Kiki's Arcade (temporal)
 
 ## GUÍA DE INSTALACIÓN DEL PROYECTO
 
