@@ -1,5 +1,9 @@
 # Classic Games
-### Kiki's Arcade (temporal)
+### Kiki's Arcade (temporal):
+* Acosta Durán Luna Fernanda
+* Aguario Carranza José Fabián
+* González Falcón Luis Adrián
+* Vázquez Castillo Mariela Eunice
 
 ## GUÍA DE INSTALACIÓN DEL PROYECTO
 
