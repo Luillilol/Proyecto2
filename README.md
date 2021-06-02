@@ -1,5 +1,4 @@
-# Proyecto2
-## Classic Games
+# Classic Games
 ### Equipo ------
 
 ## GUÍA DE INSTALACIÓN DEL PROYECTO
