@@ -12,6 +12,17 @@ body{
   background-image: url(../img/hogwarts.jpg);
   background-size: cover;
 }
+
+#titulo{
+  position: relative;
+  left: 5%;
+  font-family: "bold_amatic", Arial, Helvetica, sans-serif;
+  font-size: 86px;
+  text-align: center;
+  color: white;
+}
+
+
 h1, #msj{
   font-family: "harry", serif;
   font-size: 4rem;
@@ -154,6 +165,8 @@ h1, #msj{
   height: 300px;
 }
 #instrucciones{
+  position: absolute;
+  bottom: 86%;
   transition-delay: 0.5s;
   background-color: rgb(167, 191, 212);
   border-radius: 35px;

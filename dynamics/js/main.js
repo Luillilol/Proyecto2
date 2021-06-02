@@ -24,9 +24,7 @@ window.addEventListener("load", ()=>{
     nav.style.background = "#FFCB1E";
 
     let img2 = document.getElementById('breackoutCard');
-
     img2.innerHTML = '<img src="./statics/img/break_mora.jpg" class="card-img-top" alt="snk"><img src="./statics/img/morado_break.jpg" alt="descripcion">'
-    console.log("hola1");
   }
 
     paleta1 = document.getElementById("morado");
@@ -44,7 +42,6 @@ window.addEventListener("load", ()=>{
     let img2 = document.getElementById('breackoutCard');
 
     img2.innerHTML = '<img src="./statics/img/break_ama.jpg" class="card-img-top" alt="snk"><img src="./statics/img/amarillo_break.jpg" alt="descripcion">'
-    console.log("hola2");
   }
   
   paleta2 = document.getElementById("amarillo");
@@ -61,7 +58,6 @@ window.addEventListener("load", ()=>{
     let img2 = document.getElementById('breackoutCard');
 
     img2.innerHTML = '<img src="./statics/img/break_azu.jpg" class="card-img-top" alt="snk"><img src="./statics/img/azul_break.jpg" alt="descripcion">'
-    console.log("hola3");
   }
   /*  ACCESIBILIDAD TABINDEX */
   paleta3 = document.getElementById("azul");
@@ -108,9 +104,5 @@ window.addEventListener("load", ()=>{
   botonUsuario.addEventListener("click", ()=>{
     let name = document.getElementById("nombreUsario");
     document.cookie = "nombre="+name.value;
-    console.log(name.value);
-  });
-
-
-  
+  });  
 });

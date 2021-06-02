@@ -3,11 +3,47 @@ window.addEventListener("load", ()=>{
   can.play();
   /* 400 x 500 */
  const volumen = document.getElementById("volumen");
-
-
 volumen.addEventListener("change", ()=> {
-    can.volume = volumen.value;
+
   })
+////
+  let cookies = document.cookie;
+  let nameUser;
+
+
+  if(cookies.indexOf(";") === -1){
+    let arreglo = [];
+    arreglo = cookies.split('=');
+ 
+    nameUser = arreglo[1];
+ 
+  }else{
+    let arreglo2 = [];
+    let arrCookies = cookies.split('; ');
+
+    for(const valor of arrCookies){
+      const cookie = valor.split("=");
+      arreglo2.push(cookie);
+
+    }
+
+    nameUser = arreglo2[0][0];
+
+  }
+
+  if(cookies.indexOf(";") === -1){
+    let arreglo = [];
+    arreglo = cookies.split('=');
+    nameUser = arreglo[1];
+  }else{
+    let arreglo2 = [];
+    let arrCookies = cookies.split('; ');
+    for(const valor of arrCookies){
+      const cookie = valor.split("=");
+      arreglo2.push(cookie);
+    }
+    nameUser = arreglo2[0][0];
+  }
 
   let jugador = 0;
   function tirarDado(){
@@ -22,7 +58,6 @@ volumen.addEventListener("change", ()=> {
     let player = document.getElementById("player");
     let dado = document.getElementById("num");
     dado.innerText = num;
-    console.log(num);
     if(jugador==0)
     {
       player.innerText = jugador+1;
@@ -32,7 +67,6 @@ volumen.addEventListener("change", ()=> {
         eliminar.innerHTML = '<img src="../statics/img/transparente.png" alt="vacio">';
       }
       casilla1+=num;
-      console.log(casilla1)
       for(let i=0; i<=54; i++)
       {
         if(i==casilla1)
@@ -67,12 +101,9 @@ volumen.addEventListener("change", ()=> {
         {
           let cas = document.getElementById("54");
           cas.innerHTML = "<img src='../statics/img/play1.png' alt='ficha' width = '50px'>";
-          console.log("Gana jugador 1")
           let gana = document.getElementById("gana");
-          /*
-          let puntaje = 100;
-          document.cookie = "harry1=1";*/
-          gana.innerText = "Gana jugador 1"
+          gana.innerText = "Gana jugador 1";
+          document.cookie = "Jugador 1 = Ganador";
         }
       }
       jugador=1;
@@ -85,7 +116,6 @@ volumen.addEventListener("change", ()=> {
         eliminar.innerHTML = '<img src="../statics/img/transparente.png" alt="vacio">';
       }
       casilla2+=num;
-      console.log(casilla2)
       for(let i=0; i<=54; i++)
       {
         if(i==casilla2 && i<54)
@@ -120,17 +150,16 @@ volumen.addEventListener("change", ()=> {
         {
           let cas = document.getElementById("54");
           cas.innerHTML = "<img src='../statics/img/play2.png' alt='ficha' width = '50px'>";
-          console.log("Gana jugador 2")
           let gana = document.getElementById("gana");
           //document.cookie = "harry1=1";
           gana.innerText = "Gana jugador 2"
+          document.cookie = "Jugador 2= Ganador";
         }
       }
       jugador=0;
     }
   })
   let vuelve = document.getElementById('volver');
-
   vuelve.addEventListener("click", ()=>{
     window.location.assign("../index.html");
   })
