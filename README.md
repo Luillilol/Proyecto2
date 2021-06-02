@@ -5,7 +5,7 @@
 * Acosta Durán Luna Fernanda
 * Aguario Carranza José Fabián
 * González Falcón Luis Adrián
-* Vázquez Castillo Mariela Eunice
+* Vazquez Castillo Mariela Eunice
 
 ## GUÍA DE INSTALACIÓN DEL PROYECTO
 
