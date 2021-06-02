@@ -11,7 +11,7 @@ window.addEventListener("load", ()=>{
   const no = new Audio('../statics/audios/fin.mp3');
   const bri = new Audio ('../statics/audios/brick.m4a')
   const volver = document.getElementById('volver')
-  document.cookie="punta=puntaje";
+  
 
   volver.addEventListener("click", ()=>{
     window.location.assign("../../index.html");
@@ -21,14 +21,13 @@ window.addEventListener("load", ()=>{
   volumen.addEventListener("change", ()=> {
     can.volume = volumen.value;
   })
-
+  let puntajeCookie = puntaje;
   var vidas=5;
   var puntaje =0;
   var contBloques = 15;
   var perdiste ="G A M E   O V E R ";
   var ganaste = "Y O U   W I N";
   /* 400 x 500 */
-
   class bloque{
     constructor(x, y, estado, color){
       this.x = x;
@@ -37,7 +36,8 @@ window.addEventListener("load", ()=>{
       this.color = color
     }
   }
-  
+ document.cookie = 'color_favorito='+puntaje;
+
 
   const b1 = new bloque(30, 10, 0, 0);
   const b2 = new bloque(150, 10, 0, 0);
@@ -198,6 +198,8 @@ window.addEventListener("load", ()=>{
               perder = 1;
               can.pause();
               no.play();
+              document.cookie = 'puntuacion='+puntaje;
+
             }
 
         }    
@@ -240,6 +242,7 @@ window.addEventListener("load", ()=>{
       /*DIBUJAR BOLA*/
       drawBola();
       console.log(start);
+      console.log(contBloques+" bloques");
       if(start == 0){
         bolaMov();
         colision();
@@ -249,13 +252,36 @@ window.addEventListener("load", ()=>{
       drawBloques();
       requestAnimationFrame(draw);
     }else{
-      if(contBloques===0){
+      if(contBloques<15){
         let menos = document.getElementById('letra_cora');
         let sin = document.getElementById('corazon');
+        let mas = vidas*100;
+        puntaje+=mas;
+        pun.innerHTML=puntaje;
+        console.log(mas);
+        console.log(puntaje);
         sin.style.display="none";
         menos.innerHTML=ganaste;
+        console.log("GANASTE");
         can.pause();
         win.play();
+        document.cookie = 'puntuacion='+puntaje;
+
+        //document.cookie = "punta= Cookie"; 
+
+      
+        // if (vidas==5){
+        //   puntaje+=500;
+        // }else if (vidas==4){
+        //   puntaje+=400;
+        // }else if (vidas==3){
+        //   puntaje+=300;
+        // }else if(vidas==2){
+        //   puntaje+=200;
+        // }
+        // else if{
+        //   puntaje+=100;
+        // }
              
       }else if(vidas ===0){
         console.log("VIDAS");

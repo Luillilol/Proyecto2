@@ -1,0 +1,53 @@
+/*GENERAL*/
+table{
+  border: 2 solid crimson;
+}
+#container{
+  height: 1000px;
+}
+#recuadro1 {
+  height: 40%;
+  width: 95%;
+  left: 2.5%;
+}
+#recuadro2 {
+  height: 40%;
+  width: 95%;
+  bottom: unset;
+  left: 2.5%;
+}
+
+/*BOTONES*/
+#volver{
+  position: absolute;
+  left: 1%;
+  top: 1%;
+  transition-delay: 0.5s;
+  background-color: rgb(167, 191, 212);
+  width: 15%;
+  border-radius: 35px;
+  font-family: "bold_amatic", Arial, Helvetica, sans-serif;
+  font-size: 2.5vw;
+  text-align: center;
+}
+#volver:hover{
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: rgb(60, 84, 190);
+  transform: scale(1.1);
+  cursor:pointer;
+}
+
+/*TABLA*/
+table{
+  margin: auto;
+  width: 800px;
+  background-color: burlywood;
+}
+th{
+  border: 3px solid sienna;
+}
+tr:hover{
+  background-color:blueviolet;
+  color: white;
+}

@@ -18,7 +18,7 @@ h1{
 }
 .btn{
   width: 10%;
-  margin-left: 90%;
+  margin-left: 85%;
 }
 .music{
   position: relative;
@@ -142,12 +142,29 @@ h1{
   width: 300px;
   height: 300px;
 }
+
+#instrucciones{
+  transition-delay: 0.5s;
+  background-color: rgb(167, 191, 212);
+  border-radius: 35px;
+  font-family: "bold_amatic", Arial, Helvetica, sans-serif;
+  font-size: 2.5vw;
+  width: 200px;
+  color: black;
+}
+#instrucciones:hover{
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: rgb(60, 84, 190);
+  transform: scale(1.1);
+  cursor:pointer; 
+}
 @media screen and (max-width: 1250px){
   body{
   width: 90%;
   height: 900px;
   background-color: rgb(135, 214, 238);
-  background-image: url(../img/pantalla_real.jpg);
+  background-image: url(../img/errer.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 

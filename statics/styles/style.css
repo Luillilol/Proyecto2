@@ -1,4 +1,5 @@
-/*=== TIPOGRAFÍAS ===*/
+/*  = TIPOGRAFÍAS 
+-------------------------------------------------------------------------------------------*/
 @font-face {
     font-family:"pixel";
     src: url("../fonts/PressStart.ttf") ; }
@@ -28,7 +29,8 @@
     src: url("../fonts/Bangers.ttf") ; }    
 
 
-/*===GENERAL===*/
+/*  =GENERAL
+--------------------------------------------------------------------------------------*/
 body{
   width: 100%;
   height: 100%;
@@ -236,9 +238,9 @@ boton-jugar2{
 
 #foo{
   position: relative;
-  top: 37%;
+  top: 33%;
   width: 100%;
-  height: 30px;
+  height: 38px;
   background-color: #FFD601;
 }
 
@@ -311,120 +313,131 @@ boton-jugar2{
     bottom: 175%;
     left: 76%;
 }
+
+#volver{
+  position: absolute;
+  left: 1%;
+  top: 1%;
+  transition-delay: 0.5s;
+  background-color: rgb(167, 191, 212);
+  width: 15%;
+  border-radius: 35px;
+  font-family: "bold_amatic", Arial, Helvetica, sans-serif;
+  font-size: 2.5vw;
+  text-align: center;
+}
+#volver:hover{
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: rgb(60, 84, 190);
+  transform: scale(1.1);
+  cursor:pointer;
+}
 /*==========PACMAN=========*/
 
+.fondo{
+    z-index: 1;
+    background-color: #6505A6;
+    width: 100%;
+    height:160px;
+    box-shadow: 0 0 15px 10px rgba(255, 0, 149, 0.5);
+}
 .cuerpo {
-  animation: comer 10s infinite linear;
-  top: 0;
-  left: 0;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-} 
-.comer {
-  position: absolute;
-  top: 30px;
-  left: -55px;
-  width:1px;
-  height:1px;
-  border-right:55px solid transparent;
-  border-top:55px solid #FFD601;
-  border-left:55px solid #FFD601;
-  border-bottom:55px solid #FFD601;
-  border-radius: 55px;
-  z-index: 3;
+    animation: comer 10s infinite linear;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  } 
+  .comer {
+    position: absolute;
+    top: 30px;
+    left: -55px;
+    width:1px;
+    height:1px;
+    border-right:55px solid transparent;
+    border-top:55px solid #FFD601;
+    border-left:55px solid #FFD601;
+    border-bottom:55px solid #FFD601;
+    border-radius: 55px;
+    z-index: 3;
+  
+  }
+  .comer:after {
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    content: "";
+    height: 20px;
+    left: -10px;
+    position: absolute;
+    top: -40px;
+    width: 20px;
+    z-index: 4;
+  }
+  .comer:before {
+    border-color: #FFD601 transparent #FFD601 #FFD601;
+    border-radius: 55px 55px 55px 55px;
+    border-right: 55px solid transparent;
+    border-style: solid;
+    border-width: 55px;
+    content: "";
+    height: 1px;
+    left: -55px;
+    position: absolute;
+    top: -55px;
+    width: 1px;
+    z-index: -1;
+    animation: boca .9s infinite linear; 
+  }
+ 
+  .moneda span {
+    z-index: 2;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background: #fff;
+    margin: 45px 4%;    
+  }
 
-}
-.comer:after {
-  background: rgb(43, 3, 70);
-  border-radius: 50%;
-  content: "";
-  height: 20px;
-  left: -10px;
-  position: absolute;
-  top: -40px;
-  width: 20px;
-  z-index: 5;
-}
-.comer:before {
-  border-color: #FFD601 transparent #FFD601 #FFD601;
-  border-radius: 55px 55px 55px 55px;
-  border-right: 55px solid transparent;
-  border-style: solid;
-  border-width: 55px;
-  content: "";
-  height: 1px;
-  left: -55px;
-  position: absolute;
-  top: -55px;
-  width: 1px;
-  z-index: -1;
-  animation: boca .95s infinite linear; 
-}
-.pista {
-  background: rgb(43, 3, 70);
-  border-radius: 10px;
-  height: 160px;
-  margin: 25px 0;
-  padding: 30px 0 ;
-  position: relative;
-}
-.pista:before, .pista:after {
-  background: none repeat scroll 0 0 rgb(43, 3, 70);
-  content: "";
-  display: block;
-  height: 144px;
-  position: absolute;
-  top: 20px;
-  width: 20px;
-}
-.pista:before {left: -10px;}
-.pista:after {right: -5px;}
-.moneda span {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  border-radius: 100%;
-  background: #fff;
-  margin: 45px 4%;      
-}
-.detras {
-  background: rgb(43, 3, 70);
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  left: 0px;
-  top: 60px;
-  opacity: 1;
-  animation: detras 9.8s infinite linear;  
-}  
+  .monedas {
+    z-index: 3;  
+    position: absolute;
+    bottom: 50%;
+    background: #6505A6;
+    width:98%;
+    height: 40px;
+    animation: monedas 10s infinite linear;
+  }
+   
+  @keyframes monedas { 
+    0% { left: -12%; width:0%;}
+    100% { left: 0%; width:100%}
+  }
+  
 
-@keyframes comer { 
-  0% { left: -20%;}
-  50% { left: 50%;}
-  100% { left: 100%;}
-}
+  @keyframes comer { 
+    0% { left: -20%;}
+    100% { left: 100%;}
+  }
 
-@keyframes detras { 
-  0% { left: -12%; width:0%;}
-  100% { left: 0%; width:100%}
-}
-@keyframes boca { 
-  0%  { transform: rotate(0deg); }
-  20% { transform: rotate(-35deg); }
-  30% { transform: rotate(-52deg); }
-  40% { transform: rotate(-70deg); }
-  50% { transform: rotate(-90deg); } 
-  60% { transform: rotate(-70deg); }
-  70% { transform: rotate(-52deg); }
-  80% { transform: rotate(-35deg); }
-  100% { transform: rotate(0deg); }
-}
-
+  
+  @keyframes boca { 
+    0%  { transform: rotate(0deg); }
+    20% { transform: rotate(-35deg); }
+    30% { transform: rotate(-52deg); }
+    40% { transform: rotate(-70deg); }
+    50% { transform: rotate(-90deg); } 
+    60% { transform: rotate(-70deg); }
+    70% { transform: rotate(-52deg); }
+    80% { transform: rotate(-35deg); }
+    100% { transform: rotate(0deg); }
+  }
 /*=========== Posición Pakman ========*/
 .acomodo{
     position: relative;
-    top: 33%;
+    top: 15%;
     width:100%;
 } 
 /*====BREAKOUT===*/
@@ -435,7 +448,7 @@ boton-jugar2{
     left: 40%;
     width: 120px;
     height: 50px;
-    bottom: -600px;
+    bottom: -440px;
   }
   #container{
     height: 1200px;
@@ -479,4 +492,14 @@ boton-jugar2{
       transform: translate(100px)
     }
   }
+
 }
+  /*  =MODAL
+  ----------------------------------------------------*/
+
+  #labelUsuario{
+    position: relative;
+    left: 150px;
+  }
+  
+
